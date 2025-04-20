@@ -23,14 +23,14 @@ const SearchHistory = ({ history, onSearch, onRemove }: SearchHistoryProps) => {
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => onSearch(item)}
-                  className="text-gray-600 hover:text-blue-600"
+                  className="text-gray-600 hover:text-blue-600 cursor-pointer"
                   title="Search"
                 >
                   <Search size={16} />
                 </button>
                 <button
                   onClick={() => onRemove(item)}
-                  className="text-gray-600 hover:text-red-500"
+                  className="text-gray-600 hover:text-red-500 cursor-pointer"
                   title="Remove"
                 >
                   <Trash2 size={16} />

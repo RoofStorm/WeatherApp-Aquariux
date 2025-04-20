@@ -9,10 +9,10 @@ interface Props {
 
 const Forecast = ({ forecastList }: Props) => {
   const grouped = groupForecastByDay(forecastList);
-  const [expandedEntryId, setExpandedEntryId] = useState<number | null>(null);
+  const [expandedDay, setExpandedDay] = useState<string | null>(null); // Track expanded day by date string
 
-  const toggleExpand = (id: number) => {
-    setExpandedEntryId(expandedEntryId === id ? null : id);
+  const toggleDay = (date: string) => {
+    setExpandedDay(expandedDay === date ? null : date);
   };
 
   return (
@@ -24,8 +24,8 @@ const Forecast = ({ forecastList }: Props) => {
             key={date}
             date={date}
             entries={entries}
-            expandedEntryId={expandedEntryId}
-            onToggleExpand={toggleExpand}
+            isExpanded={expandedDay === date}
+            onToggleDay={() => toggleDay(date)}
           />
         ))}
       </div>

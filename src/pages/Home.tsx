@@ -33,7 +33,7 @@ const Home = () => {
       setCity(searchCity);
       addToHistory(searchCity);
       setError('');
-      setInput(''); // ✅ reset only on success
+      setInput(''); // reset only on success
     } catch (error) {
       console.log(error);
       setError('Invalid city or country. Please try again.');

@@ -15,7 +15,7 @@ const ForecastItemRow = ({
 }: ForecastItemRowProps) => {
   return (
     <li
-      className="bg-white rounded-lg p-4 shadow-sm cursor-pointer hover:bg-gray-50 transition"
+      className="bg-slate-200 rounded-lg p-4 shadow-sm cursor-pointer hover:bg-slate-300 transition"
       onClick={onClick}
     >
       <div className="flex justify-between items-center">
