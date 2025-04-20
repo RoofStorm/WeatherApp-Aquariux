@@ -32,17 +32,17 @@ const ForecastDay = ({
   return (
     <div className="mb-6">
       <div
-        className={`flex justify-between items-center px-4 py-2 rounded-lg cursor-pointer transition-colors duration-200 border 
+        className={`flex justify-between items-center gap-3 px-4 py-2 rounded-lg cursor-pointer transition-colors duration-200 border 
           ${isExpanded ? 'bg-gray-300 border-gray-400' : 'bg-white hover:bg-gray-300 border-gray-200'}`}
         onClick={onToggleDay}
       >
         {/* Left: Date */}
-        <div className="text-base font-medium text-gray-800 w-1/3">
+        <div className="text-base font-medium text-gray-800">
           {isToday(parseISO(date)) ? 'Today' : format(parseISO(date), 'd MMMM')}
         </div>
 
         {/* Center: Time & Temp */}
-        <div className="text-sm text-gray-600 text-center w-1/3">
+        <div className="text-sm text-gray-600 text-center">
           <div className="flex justify-center items-center gap-1">
             <Clock className="w-4 h-4" />
             {startTime} - {endTime}
@@ -54,7 +54,7 @@ const ForecastDay = ({
         </div>
 
         {/* Right: Description + Chevron */}
-        <div className="flex items-center justify-end gap-2 text-sm text-gray-500 capitalize w-1/3">
+        <div className="flex items-center justify-end gap-2 text-sm text-gray-500 capitalize">
           <Cloud className="w-4 h-4" />
           {mainDescription}
           <ChevronDown
